@@ -1,0 +1,35 @@
+.root{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.root-layout {
+    position: relative;
+}
+
+.header-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.main-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+}
+
+.footer-layout {
+    bottom: 0px;
+}
+
+button{
+    margin: 0px 10px;
+    width: 40px;
+    height: 30px;
+}
