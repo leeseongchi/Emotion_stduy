@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import SideBarTop from './components/SideBarTop/SideBarTop';
 import RootLayout from './components/RootLayout/RootLayout';
 import SideBar from './components/SideBar/SideBar';
-import Mypage from './pages/Mypage/Mypage';
+import { MENUS } from './constants/menu';
 
 function App() {
   return (
@@ -12,12 +12,9 @@ function App() {
       <Reset />
       <SideBar />
       <SideBarTop />
-      <RootLayout>
+      <RootLayout >
         <Routes>
-          <Route path='/mypage' element={<Mypage />}/>
-          <Route path='/board' element={<>게시판</>}/>
-          <Route path='/notice' element={<>공지사항</>}/>
-          <Route path='/notice' element={<>공지사항</>}/>
+          {MENUS.map(menu => <Route key={menu.id} path={menu.path} element={menu.element}/>)}
         </Routes>
       </RootLayout >
     </>
