@@ -17,6 +17,7 @@ function App() {
           <Route path='/mypage' element={<Mypage />}/>
           <Route path='/board' element={<>게시판</>}/>
           <Route path='/notice' element={<>공지사항</>}/>
+          <Route path='/notice' element={<>공지사항</>}/>
         </Routes>
       </RootLayout >
     </>
