@@ -28,7 +28,7 @@ const imageLayout = css`
     }
 `;
 
-function ImageEx3() {
+function ImageEx33() {
     const [ url, setURL ] = useState("");
     const [ urls, setURLS ] = useState([]);
     const [ uploadFiles, setUploadFiles ] = useState([]);
@@ -122,22 +122,22 @@ function ImageEx3() {
         );
     }
     
-    const handleImageUpload2 = () => {
-        uploadPromise = uploadFiles.map(file => new Promise(resolve => {
+    // const handleImageUpload2 = () => {
+    //     uploadPromise = uploadFiles.map(file => new Promise(resolve => {
     
-            console.log(uploadFiles);
-            const storageRef = ref(storage, `files/test/${uuid() + file.name}`);
-            const uploadTask = uploadBytesResumable(storageRef, file);
-            resolve(uploadTask);
-        }));
+    //         console.log(uploadFiles);
+    //         const storageRef = ref(storage, `files/test/${uuid() + file.name}`);
+    //         const uploadTask = uploadBytesResumable(storageRef, file);
+    //         resolve(uploadTask);
+    //     }));
     
-        Promise.all(uploadPromise)
-        .then(result => {
-            JSON.parse(localStorage.setItem("urls", urls));
-            setURL(result);
-            setPreviews([]);
-        });
-    }
+    //     Promise.all(uploadPromise)
+    //     .then(result => {
+    //         JSON.parse(localStorage.setItem("urls", urls));
+    //         setURL(result);
+    //         setPreviews([]);
+    //     });
+    // }
 
     return (
         <div css={layout}>
@@ -159,9 +159,9 @@ function ImageEx3() {
             )}
             <input style={{display: "none"}} type="file" multiple={true} ref={imgFileRef} onChange={handleFileChange} />
             <button onClick={() => imgFileRef.current.click()}>이미지 불러오기</button>
-            <button onClick={handleImageUpload2}>이미지 업로드</button>
+            <button onClick={handleImageUpload}>이미지 업로드</button>
         </div>
     );
 }
 
-export default ImageEx3;
+export default ImageEx33;

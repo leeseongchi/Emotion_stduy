@@ -24,7 +24,7 @@ const imageLayout = css`
     }
 `;
 
-function ImageEx2() {
+function ImageEx22() {
     const [ preview, setPreview ] = useState("");
     const imgFileRef = useRef();
 
@@ -52,4 +52,4 @@ function ImageEx2() {
     );
 }
 
-export default ImageEx2;
+export default ImageEx22;
