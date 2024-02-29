@@ -52,6 +52,11 @@ export const MENUS = [
     {
         id: 8,
         path: "/board/list",
+        params: {
+            page: 1,
+            searchValue: "test",
+            option: 1
+        },
         name: "게시글 목록",
         element: <BoardList />
     }
